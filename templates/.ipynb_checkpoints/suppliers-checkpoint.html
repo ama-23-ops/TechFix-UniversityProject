@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFix - Suppliers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Supplier Management</h1>
+    <form id="supplierForm">
+        <label for="name">Supplier Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="contact_email">Contact Email:</label>
+        <input type="email" id="contact_email" name="contact_email" required>
+        
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" id="phone_number" name="phone_number">
+        
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address">
+        
+        <label for="contact_person">Contact Person:</label>
+        <input type="text" id="contact_person" name="contact_person">
+        
+        <button type="submit">Add Supplier</button>
+    </form>
+
+    <h2>Supplier List</h2>
+    <table id="supplierTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Contact Email</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+                <th>Contact Person</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Supplier rows will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

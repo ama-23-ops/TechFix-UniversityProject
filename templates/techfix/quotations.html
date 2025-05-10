@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Quotations</h1>
+    <div id="quotations">
+        <h2>Request Quotation</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                <!-- Product rows will be dynamically populated here -->
+            </tbody>
+        </table>
+        <button id="request-quotation-btn">Request Quotation</button>
+
+        <h2>Quotation List</h2>
+        <table id="quotationTable">
+            <thead>
+                <tr>
+                    <th>Supplier ID</th>
+                    <th>Quotation ID</th>
+                    <th>Date Created</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for quotation in quotations %}
+                <tr>
+                    <td>{{ quotation.supplier_id }}</td>
+                    <td>{{ quotation.id }}</td>
+                    <td>{{ quotation.date_created }}</td>
+                    <td>{{ quotation.status }}</td>
+                    <td>
+                        <button onclick="requestQuotation('{{ quotation.id }}')">Request Quote</button>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/techfix.js') }}"></script>
+</body>
+</html>

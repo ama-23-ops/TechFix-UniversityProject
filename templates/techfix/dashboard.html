@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFix - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>TechFix Dashboard</h1>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('techfix_product.get_products_page') }}">Manage Products</a></li>
+            <li><a href="{{ url_for('order.list_orders') }}">Manage Orders</a></li>
+             <li><a href="{{ url_for('techfix_inventory.get_inventory_page') }}">Manage Inventory</a></li>
+             <li><a href="{{ url_for('quotation.list_quotations') }}">Manage Quotations</a></li>
+<li><a href="{{ url_for('supplier_management.list_suppliers') }}">Manage Supplier Accounts</a></li>
+ <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+        </ul>
+    </nav>
+
+    <script src="{{ url_for('static', filename='js/techfix.js') }}"></script>
+</body>
+</html>
+

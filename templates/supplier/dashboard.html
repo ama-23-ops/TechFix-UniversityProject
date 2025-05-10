@@ -1,0 +1,23 @@
+<!-- templates/supplier/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Supplier Dashboard</title>
+</head>
+<body>
+    <h1>Supplier Dashboard</h1>
+    <p>Welcome, Supplier!</p>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('supplier_product.get_products_page') }}">Manage Products</a></li>
+            <li><a href="{{ url_for('supplier_quotation.get_quotations') }}">Manage Quotations</a></li>
+            <li><a href="{{ url_for('supplier_inventory.get_inventory_page') }}">Manage Inventory</a></li>
+            <li><a href="{{ url_for('supplier_order.get_orders') }}">Manage Orders</a></li>
+            <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

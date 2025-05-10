@@ -1,0 +1,23 @@
+<!-- templates/quotations.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFix - Quotations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Quotation Management</h1>
+    <form id="quotationForm">
+        <label for="product_id">Product ID:</label>
+        <input type="number" id="product_id" name="product_id" required>
+        <button type="submit">Get Quotes</button>
+    </form>
+
+    <h2>Quotation Results</h2>
+    <pre id="quotationResult"></pre>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

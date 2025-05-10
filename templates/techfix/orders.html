@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+</head>
+<body>
+    <div id="orders">
+        <h2>Orders</h2>
+        <ul>
+            {% for order in orders %}
+            <li>
+                <p>Order ID: {{ order.id }}</p>
+                <p>Status: {{ order.status }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/techfix.js') }}"></script>
+</body>
+</html>

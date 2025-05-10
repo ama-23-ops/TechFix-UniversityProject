@@ -1,0 +1,14 @@
+<div id="quotation-requests">
+    <h2>Quotation Requests</h2>
+    <ul>
+        {% for quotation in quotations %}
+        <li>
+            <p>Quotation ID: {{ quotation.id }}</p>
+            <p>Status: {{ quotation.status }}</p>
+            <button onclick="respondToQuotation('{{ quotation.id }}')">Respond</button>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<script src="{{ url_for('static', filename='js/quotations.js') }}"></script>

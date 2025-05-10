@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier - Orders</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Order Management (Supplier)</h1>
+
+    <h2>Current Orders</h2>
+    <table id="orderTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>TechFix ID</th>
+                <th>Date Created</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Orders will be populated here by JavaScript -->
+        </tbody>
+    </table>
+
+    <script src="{{ url_for('static', filename='js/supplier.js') }}"></script>
+</body>
+</html>
